@@ -5,44 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Open Graph / Facebook / WhatsApp / Instagram -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="liongaragedoors.ca" />
-    <meta property="og:title" content="Garage Door Installation & Repair in the GTA" />
-    <meta property="og:description" content="Premium Garage Door Installation & Repair in the GTA" />
+    <meta property="og:url" content="lionwindowsanddoors.ca" />
+    <meta property="og:title" content="Premium Window & Door Installation & Repair in the GTA" />
+    <meta property="og:description" content="Enhance your home with expert window and door services from Lion Windows and Doors" />
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/thumbnail_logo.jpeg" />
 
     <!-- X (Twitter) Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://yourwebsite.com/" />
-    <meta name="twitter:title" content="Your Page Title Here" />
-    <meta name="twitter:description" content="A short, catchy description of your page or business." />
+    <meta name="twitter:url" content="https://lionwindowsanddoors.ca/" />
+    <meta name="twitter:title" content="Lion Windows and Doors | GTA's Premier Installation & Repair" />
+    <meta name="twitter:description" content="Expert window and door services for homes and businesses across the GTA" />
     <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/thumbnail_logo.jpeg" />
 
-    <title>Lion garage doors - Professional Garage Door Installation & Repair | York Region & GTA</title>
+    <title>Lion Windows and Doors | Premium Installation & Repair | York Region & GTA</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
-        .bg-primary { background-color: #3B1F4A; }
+        body { font-family: 'Poppins', sans-serif; color: #333; }
+        .bg-primary { background-color: #1a365d; }
+        .bg-secondary { background-color: #2c5282; }
         .text-primary { color: #1a365d; }
-        .btn-primary { background-color: #1a365d; color: white; padding: 0.75rem 1.5rem; border-radius: 0.375rem; font-weight: 600; transition: all 0.3s; }
-        .btn-primary:hover { background-color: #2d4a8a; transform: translateY(-2px); }
-        .card { border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .service-icon { width:60px; height:60px; background-color:#f0f4ff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:1rem; }
-        .testimonial-card { background-color:#f8fafc; border-radius:0.5rem; padding:1.5rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); }
-        .navbar { transition: all 0.3s; }
-        .sticky-nav { position:fixed; top:0; width:100%; z-index:100; background-color:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-        .gallery-item { overflow:hidden; border-radius:0.5rem; }
-        .gallery-item img { transition: transform 0.5s; }
-        .gallery-item:hover img { transform: scale(1.05); }
-        @media print { .no-print { display:none; } }
+        .text-secondary { color: #2c5282; }
+        .btn-primary {
+            background-color: #eab308;
+            color: #1a365d;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-secondary {
+            background-color: #1a365d;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover {
+            background-color: #2c5282;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card {
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(234, 179, 8, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #eab308;
+            font-size: 1.75rem;
+        }
+        .testimonial-card {
+            background-color: #f8fafc;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .navbar {
+            transition: all 0.3s;
+            background-color: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+        }
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 0.75rem;
+            position: relative;
+        }
+        .gallery-item img {
+            transition: transform 0.5s;
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            color: white;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(26, 54, 93, 0.9) 0%, rgba(26, 54, 93, 0.7) 100%);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background-color: #eab308;
+            border-radius: 2px;
+        }
+        .section-title-center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(234, 179, 8, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eab308;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(234, 179, 8, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eab308;
+            font-size: 1.25rem;
+            margin-right: 1rem;
+        }
         #callUsButton {
             position: fixed;
             bottom: 24px;
             right: 24px;
-            background-color: #27ae60; /* Green color, change as needed */
-            color: white;
+            background-color: #eab308;
+            color: #1a365d;
             border-radius: 50%;
             box-shadow: 0 4px 16px rgba(0,0,0,0.25);
             width: 60px;
@@ -52,410 +186,514 @@
             justify-content: center;
             z-index: 1000;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: all 0.3s;
         }
         #callUsButton:hover {
-            background: #219150;
+            background: #f59e0b;
+            transform: scale(1.1);
+        }
+        .mobile-menu {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
 <!-- Header -->
-<header class="bg-white shadow-sm">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-3xl font-bold text-primary">
-            <span class="text-yellow-500">Lion</span>garagedoors.ca
+<header class="navbar shadow-sm">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">
+                <span class="text-yellow-500"><i class="fas fa-lion mr-1"></i>Lion</span>WindowsAndDoors
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="font-medium hover:text-yellow-500 transition">Home</a>
+                <a href="#services" class="font-medium hover:text-yellow-500 transition">Services</a>
+                <a href="#about" class="font-medium hover:text-yellow-500 transition">About</a>
+                <a href="#areas" class="font-medium hover:text-yellow-500 transition">Service Areas</a>
+                <a href="#gallery" class="font-medium hover:text-yellow-500 transition">Gallery</a>
+                <a href="#testimonials" class="font-medium hover:text-yellow-500 transition">Reviews</a>
+                <a href="#contact" class="btn-primary px-6 py-2">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="hidden md:flex space-x-8">
-            <a href="#home" class="font-medium hover:text-yellow-500 transition">Home</a>
-            <a href="#services" class="font-medium hover:text-yellow-500 transition">Services</a>
-            <a href="#about" class="font-medium hover:text-yellow-500 transition">About</a>
-            <a href="#areas" class="font-medium hover:text-yellow-500 transition">Service Areas</a>
-            <a href="#gallery" class="font-medium hover:text-yellow-500 transition">Gallery</a>
-            <a href="#testimonials" class="font-medium hover:text-yellow-500 transition">Testimonials</a>
-            <a href="#contact" class="font-medium hover:text-yellow-500 transition">Contact</a>
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+            <div class="flex flex-col space-y-3 py-4">
+                <a href="#home" class="block py-2 font-medium hover:text-yellow-500 transition">Home</a>
+                <a href="#services" class="block py-2 font-medium hover:text-yellow-500 transition">Services</a>
+                <a href="#about" class="block py-2 font-medium hover:text-yellow-500 transition">About</a>
+                <a href="#areas" class="block py-2 font-medium hover:text-yellow-500 transition">Service Areas</a>
+                <a href="#gallery" class="block py-2 font-medium hover:text-yellow-500 transition">Gallery</a>
+                <a href="#testimonials" class="block py-2 font-medium hover:text-yellow-500 transition">Reviews</a>
+                <a href="#contact" class="btn-primary w-full text-center py-2 mt-2">Contact</a>
+            </div>
         </div>
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-    </nav>
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-        <a href="#home" class="block py-2 font-medium hover:text-yellow-500 transition">Home</a>
-        <a href="#services" class="block py-2 font-medium hover:text-yellow-500 transition">Services</a>
-        <a href="#about" class="block py-2 font-medium hover:text-yellow-500 transition">About</a>
-        <a href="#areas" class="block py-2 font-medium hover:text-yellow-500 transition">Service Areas</a>
-        <a href="#gallery" class="block py-2 font-medium hover:text-yellow-500 transition">Gallery</a>
-        <a href="#testimonials" class="block py-2 font-medium hover:text-yellow-500 transition">Testimonials</a>
-        <a href="#contact" class="block py-2 font-medium hover:text-yellow-500 transition">Contact</a>
     </div>
     <script>
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            menu.classList.toggle('open');
         });
     </script>
 </header>
 
-
-
-
 <!-- Hero Section -->
-<section id="home" class="bg-primary py-20">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 text-white mb-10 md:mb-0">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Premium Garage Door Installation & Repair in the GTA. <br> <span class="text-yellow-500">(289) 763-6626</span>  </h1>
-            <p class="text-lg mb-8">Enhance curb appeal, security, and functionality with durable garage doors installed by liongaragedoors.ca’s experts.</p>
-            <div class="flex space-x-4">
-                <a href="#contact" class="btn-primary">Request a Quote</a>
-                <a href="#services" class="bg-transparent border-2 border-white text-white py-3 px-6 rounded-md font-semibold hover:bg-white hover:text-primary transition">Our Services</a>
+<section id="home" class="relative bg-gray-900">
+    <div class="absolute inset-0 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+             alt="Beautiful home with windows and doors"
+             class="w-full h-full object-cover opacity-30">
+    </div>
+    <div class="relative hero-overlay py-28">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-white mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Premium Window & Door Solutions in the GTA</h1>
+                <p class="text-xl mb-8">Enhance your home's beauty, security, and energy efficiency with expert installations from our certified professionals.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="btn-primary text-center">Get Free Estimate</a>
+                    <a href="tel:2897636626" class="btn-secondary text-center">
+                        <i class="fas fa-phone mr-2"></i> (289) 763-6626
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                        <span>Licensed & Insured</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                        <span>Free Estimates</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="md:w-1/2">
-            <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/liongaragedoors_with_happy_client.png" alt="Garage door" class="w-full rounded-lg shadow-2xl">
+            <div class="md:w-1/2">
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+                    <div class="bg-primary text-white py-3 px-6">
+                        <h3 class="font-bold text-lg">Request a Free Consultation</h3>
+                    </div>
+                    <div class="p-6">
+                        <form>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div class="mb-4">
+                                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div class="mb-4">
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                    <option value="">Select Service</option>
+                                    <option value="windows">Window Installation</option>
+                                    <option value="doors">Door Installation</option>
+                                    <option value="repair">Repair Services</option>
+                                    <option value="consultation">Consultation</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary w-full py-3">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Features -->
-<section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <i class="fas fa-certificate text-blue-600 text-2xl mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
-            <p class="text-gray-600">Certified garage door professionals you can trust.</p>
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-4 section-title section-title-center">Why Choose Lion Windows and Doors</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">We're committed to excellence in every project, delivering quality craftsmanship and exceptional customer service.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <i class="fas fa-shield-alt text-red-600 text-2xl mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">10-Year Warranty</h3>
-            <p class="text-gray-600">Comprehensive warranty on all installations & repairs.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <i class="fas fa-cogs text-green-600 text-2xl mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Energy Efficient</h3>
-            <p class="text-gray-600">Insulated doors improve temperature control & save energy.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+                <div class="feature-icon mx-auto">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">15+ Years Experience</h3>
+                <p class="text-gray-600">Trust our seasoned professionals with extensive industry knowledge.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="feature-icon mx-auto">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">10-Year Warranty</h3>
+                <p class="text-gray-600">Comprehensive protection on all our installations and repairs.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="feature-icon mx-auto">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Energy Efficient</h3>
+                <p class="text-gray-600">High-performance products that reduce energy costs year-round.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Services -->
-<section id="services" class="py-16">
+<section id="services" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-primary mb-4">Our Services</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive garage door solutions across York Region & GTA.</p>
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-4 section-title section-title-center">Our Services</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive window and door solutions for residential and commercial properties.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- 1 -->
-            <div class="card p-6 bg-white text-center">
-                <i class="fas fa-door-open text-2xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">New Door Installation</h3>
-                <p class="text-gray-600 mb-4">Sectional, roll-up, carriage-style doors tailored to your home.</p>
-                <ul class="text-left space-y-2">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Steel, aluminum & wood options</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Insulated & non-insulated</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Custom colors & finishes</li>
-                </ul>
+            <!-- Service 1 -->
+            <div class="card bg-white">
+                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                     alt="Window Installation" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Window Installation</h3>
+                    <p class="text-gray-600 mb-4 text-center">Expert installation of energy-efficient windows for enhanced comfort and savings.</p>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Vinyl, wood, and composite options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Energy Star certified products</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Custom sizes and styles</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full block text-center mt-4">Get a Quote</a>
+                </div>
             </div>
-            <!-- 2 -->
-            <div class="card p-6 bg-white text-center">
-                <i class="fas fa-tools text-2xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Repair & Maintenance</h3>
-                <p class="text-gray-600 mb-4">Springs, cables, rollers & opener repairs for smooth operation.</p>
-                <ul class="text-left space-y-2">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Spring & cable replacement</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Roller & hinge repair</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Opener diagnostics</li>
-                </ul>
+
+            <!-- Service 2 -->
+            <div class="card bg-white">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80"
+                     alt="Door Installation" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Door Installation</h3>
+                    <p class="text-gray-600 mb-4 text-center">Beautiful, secure entry doors that enhance your home's curb appeal.</p>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Steel, fiberglass, and wood options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Custom designs and finishes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Enhanced security features</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full block text-center mt-4">Get a Quote</a>
+                </div>
             </div>
-            <!-- 3 -->
-            <div class="card p-6 bg-white text-center">
-                <i class="fas fa-cogs text-2xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Opener Installation</h3>
-                <p class="text-gray-600 mb-4">Quiet belt & chain drive openers with smart controls.</p>
-                <ul class="text-left space-y-2">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Belt & chain drives</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Smartphone integration</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Battery backup</li>
-                </ul>
-            </div>
-            <!-- 4 -->
-            <div class="card p-6 bg-white text-center">
-                <i class="fas fa-home text-2xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Custom Solutions</h3>
-                <p class="text-gray-600 mb-4">Heritage, carriage-style & glass-inset custom doors.</p>
-                <ul class="text-left space-y-2">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Carriage & carriage-style</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Glass & wood inserts</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Smart home ready</li>
-                </ul>
-            </div>
-            <!-- 5 -->
-            <div class="card p-6 bg-white text-center">
-                <i class="fas fa-shield-alt text-2xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Safety Upgrades</h3>
-                <p class="text-gray-600 mb-4">Auto-reverse sensors & keypad entry for added security.</p>
-                <ul class="text-left space-y-2">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Auto-reverse sensors</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Keypad & remote entry</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Motion-activated lights</li>
-                </ul>
-            </div>
-            <!-- 6 -->
-            <div class="card p-6 bg-white text-center">
-                <i class="fas fa-clipboard-check text-2xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">Consultation & Estimate</h3>
-                <p class="text-gray-600 mb-4">Free in-home consultation & detailed written estimate.</p>
-                <ul class="text-left space-y-2">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Free consultations</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Written quotes</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i>Product demos</li>
-                </ul>
+
+            <!-- Service 3 -->
+            <div class="card bg-white">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                     alt="Repair Services" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Repair Services</h3>
+                    <p class="text-gray-600 mb-4 text-center">Prompt, reliable repairs to restore functionality and security.</p>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Window and door repairs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Hardware replacement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span>Emergency service available</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full block text-center mt-4">Get a Quote</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- About -->
-<section id="about" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 md:pr-10 mb-10 md:mb-0">
-            <h2 class="text-3xl font-bold text-primary mb-4">About lion garage doors</h2>
-            <p class="text-gray-700 mb-4">With 15+ years serving York Region & GTA, Lion Garage Doors delivers expert garage door installations, replacements, and repairs for residential & commercial clients.</p>
-            <p class="text-gray-700 mb-4">Our trained technicians focus on precision, safety, and exceptional customer service, ensuring your garage door performs flawlessly.</p>
-            <p class="text-gray-700 mb-6">We know your garage door impacts security, energy efficiency, and home value. Trust Lion Garage Doors for top-quality products and workmanship.</p>
-            <div class="flex space-x-8">
-                <div class="flex items-center">
-                    <i class="fas fa-users text-blue-600 text-xl mr-4"></i>
-                    <div>
-                        <h4 class="font-semibold">Experienced Team</h4>
-                        <p class="text-sm text-gray-600">15+ years in garage doors</p>
+<section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                <h2 class="text-3xl font-bold text-primary mb-6 section-title">About Lion Windows and Doors</h2>
+                <p class="text-gray-700 mb-4">Founded in 2008, Lion Windows and Doors has been proudly serving the Greater Toronto Area with exceptional window and door solutions. Our mission is simple: to provide superior products, expert installation, and outstanding customer service.</p>
+                <p class="text-gray-700 mb-6">We understand that your windows and doors are more than just functional elements - they're integral to your home's comfort, security, and aesthetic appeal. That's why we go above and beyond to ensure every project meets our exacting standards.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="mr-4 mt-1 text-yellow-500">
+                            <i class="fas fa-check-circle text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Licensed & Insured</h4>
+                            <p class="text-gray-600 text-sm">Full coverage for your peace of mind</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-thumbs-up text-green-600 text-xl mr-4"></i>
-                    <div>
-                        <h4 class="font-semibold">Satisfied Clients</h4>
-                        <p class="text-sm text-gray-600">1000+ projects completed</p>
+                    <div class="flex items-start">
+                        <div class="mr-4 mt-1 text-yellow-500">
+                            <i class="fas fa-check-circle text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Local Experts</h4>
+                            <p class="text-gray-600 text-sm">Serving the GTA for over 15 years</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mr-4 mt-1 text-yellow-500">
+                            <i class="fas fa-check-circle text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Quality Materials</h4>
+                            <p class="text-gray-600 text-sm">Premium products from trusted manufacturers</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mr-4 mt-1 text-yellow-500">
+                            <i class="fas fa-check-circle text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Satisfaction Guarantee</h4>
+                            <p class="text-gray-600 text-sm">We stand behind our work</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="md:w-1/2 grid grid-cols-2 gap-4">
-            <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/team1.jpeg" alt="Installer" class="w-full h-full object-cover rounded-lg">
-            <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/teamgroup.png" alt="Installation" class="w-full h-full object-cover rounded-lg">
-            <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/clienthappy.jpeg" alt="Team" class="col-span-2 w-full h-full object-cover rounded-lg">
+            <div class="lg:w-1/2">
+                <div class="relative">
+                    <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/teamgroup.png"
+                         alt="Lion Windows and Doors team"
+                         class="w-full rounded-lg shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 bg-yellow-500 p-4 rounded-lg shadow-lg hidden md:block">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-white">15+</div>
+                            <div class="text-white font-medium">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Service Areas Section -->
-<section id="areas" class="py-16">
+<section id="areas" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-primary mb-4">Our Service Areas</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Lion Garage Doors proudly serves York Region with exceptional garage door installation.</p>
+            <h2 class="text-3xl font-bold text-primary mb-4 section-title section-title-center">Our Service Areas</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">We proudly serve York Region and surrounding areas with premium window and door services.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- York Region -->
-            <div class="card p-6 bg-white">
-                <h3 class="text-xl font-semibold mb-4 text-primary">York Region</h3>
-                <p class="text-gray-600 mb-4">We provide comprehensive garage door installation, replacement, and repair services throughout York Region, including:</p>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Aurora</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>East Gwillimbury</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Georgina</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>King</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Markham</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Newmarket</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Richmond Hill</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Vaughan</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Whitchurch-Stouffville</span>
-                    </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-primary text-white py-3 px-6">
+                    <h3 class="font-bold text-lg">York Region</h3>
                 </div>
-            </div>
-            <!-- Barrie & Surrounding Areas (within 60 km) -->
-            <div class="card p-6 bg-white mt-6">
-                <h3 class="text-xl font-semibold mb-4 text-primary">Barrie & Surrounding Areas</h3>
-                <p class="text-gray-600 mb-4">We also serve Barrie and nearby communities within a 60 km radius, including:</p>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Barrie</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Innisfil</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Oro-Medonte</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Elmvale</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Angus</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Alliston</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Orillia</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Midland</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Wasaga Beach</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Stayner</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Bradford West Gwillimbury</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Sutton</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Creemore</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Collingwood</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Tottenham</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                        <span>Beaverton</span>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Aurora</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>East Gwillimbury</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Georgina</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>King City</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Markham</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Newmarket</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Richmond Hill</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Vaughan</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Whitchurch-Stouffville</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-primary text-white py-3 px-6">
+                    <h3 class="font-bold text-lg">Barrie & Surrounding Areas</h3>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Barrie</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Innisfil</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Oro-Medonte</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Orillia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Midland</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Wasaga Beach</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Collingwood</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Alliston</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-3"></i>
+                            <span>Bradford</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Gallery Section -->
-<section id="gallery" class="py-16 bg-gray-50">
+<section id="gallery" class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-primary mb-4">Our Project Gallery</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Browse through some of our recent garage door installation projects in York Region and the GTA.</p>
+            <h2 class="text-3xl font-bold text-primary mb-4 section-title section-title-center">Our Work</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Browse our portfolio of completed window and door projects in the GTA.</p>
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Gallery Item 1 -->
+            <!-- Project 1 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/premium-black-garage-door.jpeg" alt="Modern front door installation" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white">
-                    <h4 class="font-semibold">Garage Door with slim windows</h4>
-                    <p class="text-gray-600 text-sm">Richmond Hill, ON</p>
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/premium-black-garage-door.jpeg"
+                     alt="Modern black windows and doors"
+                     class="w-full">
+                <div class="gallery-overlay">
+                    <h4 class="font-bold text-lg">Modern Black Windows</h4>
+                    <p class="text-sm">Richmond Hill, ON</p>
                 </div>
             </div>
 
-            <!-- Gallery Item 2 -->
+            <!-- Project 2 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/solid-white-garage-door.jpeg" alt="garage door installation" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white">
-                    <h4 class="font-semibold">Non-Insulated Solid White Garage Door</h4>
-                    <p class="text-gray-600 text-sm">Markham, ON</p>
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/solid-white-garage-door.jpeg"
+                     alt="Classic white windows"
+                     class="w-full">
+                <div class="gallery-overlay">
+                    <h4 class="font-bold text-lg">Classic White Windows</h4>
+                    <p class="text-sm">Markham, ON</p>
                 </div>
             </div>
 
-            <!-- Gallery Item 3 -->
+            <!-- Project 3 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/modern-garage-door-one.jpeg" alt="Sliding patio door" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white">
-                    <h4 class="font-semibold">Premium white garage door</h4>
-                    <p class="text-gray-600 text-sm">Vaughan, ON</p>
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/modern-garage-door-one.jpeg"
+                     alt="Contemporary door installation"
+                     class="w-full">
+                <div class="gallery-overlay">
+                    <h4 class="font-bold text-lg">Contemporary Entry Door</h4>
+                    <p class="text-sm">Vaughan, ON</p>
                 </div>
             </div>
 
-            <!-- Gallery Item 4 -->
+            <!-- Project 4 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/insulated-white-garage-door.jpeg" alt="garage door installation installation" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white">
-                    <h4 class="font-semibold">Premium white finish garage door</h4>
-                    <p class="text-gray-600 text-sm">Toronto, ON</p>
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/insulated-white-garage-door.jpeg"
+                     alt="Energy efficient windows"
+                     class="w-full">
+                <div class="gallery-overlay">
+                    <h4 class="font-bold text-lg">Energy Efficient Windows</h4>
+                    <p class="text-sm">Toronto, ON</p>
                 </div>
             </div>
 
-            <!-- Gallery Item 5 -->
+            <!-- Project 5 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/insulated-dark-finish-garage-door.jpeg" alt="Custom entry door" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white">
-                    <h4 class="font-semibold">Insulated dark finish garage door</h4>
-                    <p class="text-gray-600 text-sm">Newmarket, ON</p>
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/insulated-dark-finish-garage-door.jpeg"
+                     alt="Dark finish windows"
+                     class="w-full">
+                <div class="gallery-overlay">
+                    <h4 class="font-bold text-lg">Dark Finish Windows</h4>
+                    <p class="text-sm">Newmarket, ON</p>
                 </div>
             </div>
 
-            <!-- Gallery Item 6 -->
+            <!-- Project 6 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/modern-garage-door-two.jpeg" alt="garage door installation" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white">
-                    <h4 class="font-semibold">Modern garage door</h4>
-                    <p class="text-gray-600 text-sm">Aurora, ON</p>
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/modern-garage-door-two.jpeg"
+                     alt="Modern window installation"
+                     class="w-full">
+                <div class="gallery-overlay">
+                    <h4 class="font-bold text-lg">Modern Window Installation</h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <!-- Testimonials Section -->
-<section id="testimonials" class="py-16">
+<section id="testimonials" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold text-primary mb-4">What Our Clients Say</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Read testimonials from our satisfied clients.</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with our windows and door services.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Testimonial 1 -->
-            <div class="testimonial-card">
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
                     <div class="text-yellow-400 flex">
                         <i class="fas fa-star"></i>
@@ -465,7 +703,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"Lion Garage Doors replaced all the garage door in our home and did an exceptional job. Their team was professional, efficient, and left our home spotless. The new garage door installation looks fantastic and have already made a noticeable difference in our energy bills. Highly recommend!"</p>
+                <p class="text-gray-700 mb-4">"Lion Windows and Doors replaced all the windows in our home and did an exceptional job. Their team was professional, efficient, and left our home spotless. The new windows look fantastic and have already made a noticeable difference in our energy bills. Highly recommend!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -480,7 +718,7 @@
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="testimonial-card">
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
                     <div class="text-yellow-400 flex">
                         <i class="fas fa-star"></i>
@@ -490,7 +728,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"We needed a new front door and couldn't be happier with Lion Garage Doors's service. From the initial consultation to the installation, everything was done with utmost professionalism. The installer took great care with our home and the finished result is beautiful. Thank you!"</p>
+                <p class="text-gray-700 mb-4">"We needed a new front door and couldn't be happier with Lion Windows and Doors's service. From the initial consultation to the installation, everything was done with utmost professionalism. The installer took great care with our home and the finished result is beautiful. Thank you!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
@@ -505,7 +743,7 @@
             </div>
 
             <!-- Testimonial 3 -->
-            <div class="testimonial-card">
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
                     <div class="text-yellow-400 flex">
                         <i class="fas fa-star"></i>
@@ -515,7 +753,7 @@
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"When our basement entrance needed emergency garage door installation repair after a storm, Lion Garage Doors responded quickly and professionally. They fixed the issue and even advised us on improving the surrounding drainage to prevent future problems. Great service at a fair price."</p>
+                <p class="text-gray-700 mb-4">"When our basement entrance needed emergency window and door repair after a storm, Lion Windows and Doors responded quickly and professionally. They fixed the issue and even advised us on improving the surrounding drainage to prevent future problems. Great service at a fair price."</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -530,7 +768,7 @@
             </div>
 
             <!-- Testimonial 4 -->
-            <div class="testimonial-card">
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
                     <div class="text-yellow-400 flex">
                         <i class="fas fa-star"></i>
@@ -540,7 +778,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"We recently had Lion Garage Doors install new patio doors and couldn't be more pleased with the results. Their attention to detail and craftsmanship are exceptional. The installers were courteous, clean, and completed the job on schedule. Our new doors look fantastic!"</p>
+                <p class="text-gray-700 mb-4">"We recently had Lion Windows and Doors install new patio doors and couldn't be more pleased with the results. Their attention to detail and craftsmanship are exceptional. The installers were courteous, clean, and completed the job on schedule. Our new doors look fantastic!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
@@ -555,7 +793,7 @@
             </div>
 
             <!-- Testimonial 5 -->
-            <div class="testimonial-card">
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
                     <div class="text-yellow-400 flex">
                         <i class="fas fa-star"></i>
@@ -565,7 +803,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"As a contractor, I've worked with many garage door installation companies, and Lion Garage Doors stands out for their quality and reliability. They've been my go-to for client projects for years. Their products are excellent, pricing is competitive, and they always meet deadlines. Highly recommended!"</p>
+                <p class="text-gray-700 mb-4">"As a contractor, I've worked with many window and door companies, and Lion Windows and Doors stands out for their quality and reliability. They've been my go-to for client projects for years. Their products are excellent, pricing is competitive, and they always meet deadlines. Highly recommended!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -580,7 +818,7 @@
             </div>
 
             <!-- Testimonial 6 -->
-            <div class="testimonial-card">
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
                     <div class="text-yellow-400 flex">
                         <i class="fas fa-star"></i>
@@ -590,7 +828,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"We had Lion Garage Doors replace all the garage door installations in our century home, and they did an amazing job matching the historical style while providing modern energy efficiency. Their expertise with heritage properties was invaluable, and the results exceeded our expectations."</p>
+                <p class="text-gray-700 mb-4">"We had Lion Windows and Doors replace all the windows in our century home, and they did an amazing job matching the historical style while providing modern energy efficiency. Their expertise with heritage properties was invaluable, and the results exceeded our expectations."</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
@@ -606,234 +844,6 @@
         </div>
     </div>
 </section>
-
-<!-- CTA Section -->
-<section class="py-16 bg-primary">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Home?</h2>
-        <p class="text-white text-lg mb-8 max-w-2xl mx-auto">Contact us today for a free consultation and estimate on your garage door installation project. Experience the Lion Garage Doors difference!</p>
-        <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-md font-semibold hover:bg-yellow-500 hover:text-white transition">Get a Free Quote</a>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="py-16">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-primary mb-4">Contact Us</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Have questions or ready to start your project? Get in touch with our team today for a free consultation and estimate.</p>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <h3 class="text-xl font-semibold mb-6">Send Us a Message</h3>
-                <form action="#" method="POST">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="first_name" class="block text-gray-700 mb-2">First Name</label>
-                            <input type="text" id="first_name" name="first_name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="last_name" class="block text-gray-700 mb-2">Last Name</label>
-                            <input type="text" id="last_name" name="last_name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="service" class="block text-gray-700 mb-2">Service Interested In</label>
-                        <select id="service" name="service" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <option value="">Select a service</option>
-                            <option value="installation">Garage door installation</option>
-                            <option value="repair">Garage door Repair</option>
-                            <option value="energy_upgrade">Energy Efficiency Upgrade</option>
-                            <option value="consultation">Consultation</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary w-full">Submit Request</button>
-                </form>
-            </div>
-            <div>
-                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                    <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="mr-4 mt-1">
-                                <i class="fas fa-map-marker-alt text-red-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Address</h4>
-                                <p class="text-gray-600"> 47 Newbury drive <br>Newmarket, ON </p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="mr-4 mt-1">
-                                <i class="fas fa-phone text-green-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Phone</h4>
-                                <p class="text-gray-600">+1 (289) 763-6626</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="mr-4 mt-1">
-                                <i class="fas fa-envelope text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Email</h4>
-                                <p class="text-gray-600">info@lionpro.ca</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="mr-4 mt-1">
-                                <i class="fas fa-clock text-purple-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Business Hours</h4>
-                                <p class="text-gray-600">Monday - Friday: 8:00 AM - 8:00 PM<br>Sunday: 8:00 AM - 4:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-6">
-                        <h4 class="font-semibold mb-2">Connect With Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-blue-800 text-white rounded-full flex items-center justify-center hover:bg-blue-900 transition">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-8">
-                    <h3 class="text-xl font-semibold mb-6">Service Area</h3>
-                    <div class="rounded-lg overflow-hidden" style="height: 300px; background-color: #f0f0f0;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d366799.1880860103!2d-79.79543240698068!3d44.09122514385935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882acdaee4d2a679%3A0x108dcfb46a288a64!2sRegional%20Municipality%20of%20York%2C%20ON!5e0!3m2!1sen!2sca!4v1746888653910!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                        <div class="w-full h-full flex items-center justify-center">
-                            <p class="text-gray-600">Map of York Region & GTA Service Areas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-500">Lion</span>garagedoors.ca</h3>
-                <p class="mb-4">Professional garage door installation services in York Region.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
-                    <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
-                    <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                    <li><a href="#gallery" class="text-gray-400 hover:text-white transition">Project Gallery</a></li>
-                    <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
-                    <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-lg font-semibold mb-4">Services</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Garage door installation</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Door Installation</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Energy Efficiency Upgrades</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Free Consultations</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                <ul class="space-y-2">
-                    <li class="flex items-start">
-                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
-                        <span>147 Newbury drive <br>Newmarket</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-phone mr-2"></i>
-                        <span>+1 (289) 763-6626</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-envelope mr-2"></i>
-                        <span>info@lionpro.ca</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-clock mr-2"></i>
-                        <span>Mon-Fri: 8AM-6PM, Sun: 8AM-4PM</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="mt-12 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; 2023 liongaragedoors.ca garage door installation. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<!-- Floating Call Us Button -->
-<a href="tel:4379704831" id="callUsButton" title="Call Us">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="28" height="28" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.05 11.05 0 003.48.56 1 1 0 011 1v3.54a1 1 0 01-.91 1A19.91 19.91 0 013 4.92 1 1 0 014 4h3.54a1 1 0 011 1 11.05 11.05 0 00.56 3.48 1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
-</a>
-
-
-<script>
-    // Sticky navigation
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('sticky-nav');
-        } else {
-            navbar.classList.remove('sticky-nav');
-        }
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
 </body>
+
 </html>
