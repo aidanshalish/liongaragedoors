@@ -507,6 +507,25 @@
         </div>
     </div>
 </section>
+<!-- Before & After Section -->
+<section id="before-after" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-4 section-title section-title-center">Before &amp; After</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Drag the slider to see the transformation.</p>
+        </div>
+        <div class="max-w-3xl mx-auto">
+            <div class="before-after-container">
+                <img src="https://images.unsplash.com/photo-1542482376-bfd0c6eea71c?auto=format&fit=crop&w=1200&q=80" alt="Before" class="w-full h-auto">
+                <div id="afterImage" class="after-image">
+                    <img src="https://images.unsplash.com/photo-1560185127-6c22379c1c8b?auto=format&fit=crop&w=1200&q=80" alt="After" class="w-full h-full object-cover">
+                </div>
+                <div id="sliderLine" class="before-after-line"></div>
+                <input id="beforeAfterRange" type="range" min="0" max="100" value="50" class="before-after-range">
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Testimonials Section -->
 <section id="testimonials" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
@@ -667,6 +686,20 @@
         </div>
     </div>
 </section>
+<script>
+    const range = document.getElementById('beforeAfterRange');
+    const afterImg = document.getElementById('afterImage');
+    const line = document.getElementById('sliderLine');
+
+    function updateBeforeAfter() {
+        const val = range.value;
+        afterImg.style.width = val + '%';
+        line.style.left = `calc(${val}% - 1px)`;
+    }
+
+    range.addEventListener('input', updateBeforeAfter);
+    window.addEventListener('load', updateBeforeAfter);
+</script>
 </body>
 
 </html>
