@@ -53,7 +53,7 @@
                 <a href="#contact" class="btn-primary px-6 py-2">Contact</a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -535,7 +535,8 @@
                     <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/1ab27e44-45fc-4a8b-0e42-544f26a7f400/public" alt="After" class="w-full h-full object-cover">
                 </div>
                 <div id="sliderLine" class="before-after-line"></div>
-                <input id="beforeAfterRange" type="range" min="0" max="100" value="50" class="before-after-range">
+                <label for="beforeAfterRange" class="sr-only">Before and after comparison slider</label>
+                <input id="beforeAfterRange" type="range" min="0" max="100" value="50" class="before-after-range" aria-label="Drag to compare before and after images">
             </div>
         </div>
     </div>
@@ -877,7 +878,7 @@
     </div>
     
     <!-- Floating Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 bg-yellow-500 text-gray-900 w-12 h-12 rounded-full shadow-lg hover:bg-yellow-400 transition-all duration-300 opacity-0 invisible z-50">
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-yellow-500 text-gray-900 w-12 h-12 rounded-full shadow-lg hover:bg-yellow-400 transition-all duration-300 opacity-0 invisible z-50" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 </footer>
@@ -932,7 +933,31 @@
         });
     });
 
+    // SMS Form Handler
+    document.getElementById("smsForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            service: form.service.value
+        };
 
+        try {
+            const res = await fetch("https://clicksend-worker.aidan-shalish.workers.dev", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(data)
+            });
+
+            const message = await res.text();
+            alert(message);
+            form.reset();
+        } catch (err) {
+            alert("Something went wrong. Please try again later.");
+        }
+    });
 </script>
 </body>
 
