@@ -1,173 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Closet Door Services | Lion Windows and Doors</title>
-    <meta name="description" content="Quality closet door installation and repair services in the GTA">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body class="bg-gray-50">
-<header class="navbar shadow-sm">
-    <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-            <div class="text-2xl font-bold text-primary">
-                <span class="text-yellow-500"><i class="fas fa-lion mr-1"></i>Lion</span>WindowsAndDoors
-            </div>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="../index.html#home" class="font-medium hover:text-yellow-500 transition">Home</a>
+#!/usr/bin/env python3
+"""
+Script to add footer to all remaining HTML files in the project
+"""
 
-                <div class="dropdown">
-                    <a href="../index.html#services" class="font-medium hover:text-yellow-500 transition inline-flex items-center">Services <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="weatherstripping_sealing.html">Weatherstripping &amp; Sealing</a>
-                        <a href="patio_doors.html">Patio Doors</a>
-                        <a href="exterior_doors.html">Exterior Doors</a>
-                        <a href="glass_replacement.html">Glass Replacement</a>
-                        <a href="closet_doors.html">Closet Doors</a>
-                        <a href="casement_window.html">Casement Window</a>
-                    </div>
-                </div>
+import os
+import re
 
-                <a href="../index.html#about" class="font-medium hover:text-yellow-500 transition">About</a>
-                <a href="../index.html#areas" class="font-medium hover:text-yellow-500 transition">Service Areas</a>
-                <a href="../index.html#gallery" class="font-medium hover:text-yellow-500 transition">Gallery</a>
-                <a href="../index.html#testimonials" class="font-medium hover:text-yellow-500 transition">Reviews</a>
-                <a href="../index.html#contact" class="btn-primary px-6 py-2">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="mobile-menu md:hidden">
-            <div class="flex flex-col space-y-3 py-4">
-                <a href="../index.html#home" class="block py-2 font-medium hover:text-yellow-500 transition">Home</a>
-
-                <div>
-                    <p class="font-medium">Services</p>
-                    <div class="pl-4 flex flex-col space-y-2 mt-2">
-                        <a href="weatherstripping_sealing.html" class="block py-1 text-sm hover:text-yellow-500">Weatherstripping &amp; Sealing</a>
-                        <a href="patio_doors.html" class="block py-1 text-sm hover:text-yellow-500">Patio Doors</a>
-                        <a href="exterior_doors.html" class="block py-1 text-sm hover:text-yellow-500">Exterior Doors</a>
-                        <a href="glass_replacement.html" class="block py-1 text-sm hover:text-yellow-500">Glass Replacement</a>
-                        <a href="closet_doors.html" class="block py-1 text-sm hover:text-yellow-500">Closet Doors</a>
-                        <a href="casement_window.html" class="block py-1 text-sm hover:text-yellow-500">Casement Window</a>
-                    </div>
-                </div>
-
-                <a href="../index.html#about" class="block py-2 font-medium hover:text-yellow-500 transition">About</a>
-                <a href="../index.html#areas" class="block py-2 font-medium hover:text-yellow-500 transition">Service Areas</a>
-                <a href="../index.html#gallery" class="block py-2 font-medium hover:text-yellow-500 transition">Gallery</a>
-                <a href="../index.html#testimonials" class="block py-2 font-medium hover:text-yellow-500 transition">Reviews</a>
-                <a href="../index.html#contact" class="btn-primary w-full text-center py-2 mt-2">Contact</a>
-            </div>
-        </div>
-    </div>
-    <script>
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-    </script>
-</header>
-
-<section class="relative bg-gray-900">
-    <div class="absolute inset-0 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1597007516503-9d0dc9f69cb2?auto=format&fit=crop&w=2070&q=80" alt="Closet doors" class="w-full h-full object-cover opacity-40">
-    </div>
-    <div class="relative hero-overlay py-24">
-        <div class="container mx-auto px-4 text-center text-white">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Closet Doors</h1>
-            <p class="text-xl mb-8">Stylish, Functional, and Space-Saving</p>
-            <a href="../index.html#contact" class="btn-primary inline-block">Request a Free Quote</a>
-        </div>
-    </div>
-</section>
-
-<section class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary mb-8">Why Choose Quality Closet Doors?</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div class="text-center p-6">
-                <div class="feature-icon mx-auto"><i class="fas fa-sliders-h"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Smooth Operation</h3>
-                <p class="text-gray-600">Easy to slide, fold, or swing open.</p>
-            </div>
-            <div class="text-center p-6">
-                <div class="feature-icon mx-auto"><i class="fas fa-paint-brush"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Modern Designs</h3>
-                <p class="text-gray-600">Customize to match your interior style.</p>
-            </div>
-            <div class="text-center p-6">
-                <div class="feature-icon mx-auto"><i class="fas fa-compress-arrows-alt"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Space-Saving</h3>
-                <p class="text-gray-600">Perfect for small or tight spaces.</p>
-            </div>
-            <div class="text-center p-6">
-                <div class="feature-icon mx-auto"><i class="fas fa-shield-alt"></i></div>
-                  <h3 class="text-xl font-semibold mb-2">Durable &amp; Reliable</h3>
-                <p class="text-gray-600">Built to last with strong materials.</p>
-            </div>
-            <div class="text-center p-6">
-                <div class="feature-icon mx-auto"><i class="fas fa-mirror"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Mirror Options</h3>
-                <p class="text-gray-600">Add light and depth to your room.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-12 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary mb-8">Our Services Include</h2>
-        <ul class="max-w-xl mx-auto space-y-3 text-gray-700">
-            <li class="flex items-start"><i class="fas fa-check text-yellow-500 mr-2 mt-1"></i>Closet door installation</li>
-            <li class="flex items-start"><i class="fas fa-check text-yellow-500 mr-2 mt-1"></i>Sliding, bifold, and swing door options</li>
-            <li class="flex items-start"><i class="fas fa-check text-yellow-500 mr-2 mt-1"></i>Mirror closet door replacements</li>
-            <li class="flex items-start"><i class="fas fa-check text-yellow-500 mr-2 mt-1"></i>Track and hardware repairs</li>
-            <li class="flex items-start"><i class="fas fa-check text-yellow-500 mr-2 mt-1"></i>Custom sizing and retrofitting</li>
-        </ul>
-        <div class="text-center mt-10">
-            <a href="../index.html#contact" class="btn-primary px-8 py-3 inline-block">Schedule Your Consultation</a>
-        </div>
-    </div>
-</section>
-
-<section class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary mb-8">Closet Door Inspirations</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div class="gallery-item">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/9e31d834-83b7-4dd4-e0e1-455db7117800/public" alt="Modern closet door" class="w-full">
-                <div class="gallery-overlay flex items-end">
-                    <h4 class="font-bold text-lg">Modern Style</h4>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/02c98352-f8ff-438b-32f0-90b11f235900/public" alt="Sliding closet storage" class="w-full">
-                <div class="gallery-overlay flex items-end">
-                    <h4 class="font-bold text-lg">Space Saver</h4>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/0402830e-1cc3-4f97-8172-0e835e30dd00/public" alt="Mirrored closet doors" class="w-full">
-                <div class="gallery-overlay flex items-end">
-                    <h4 class="font-bold text-lg">Reflective Elegance</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+# Footer HTML template for service files
+SERVICE_FOOTER = '''
 <!-- Footer -->
 <footer id="contact" class="relative bg-gray-900 text-white overflow-hidden">
     <!-- Background Pattern -->
@@ -389,4 +229,56 @@
     });
 </script>
 </body>
-</html>
+</html>'''
+
+# Main footer template for main directory files
+MAIN_FOOTER = SERVICE_FOOTER.replace('../index.html#', '#').replace('href="', 'href="services/')
+
+def add_footer_to_file(file_path, footer_content):
+    """Add footer to a single HTML file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if footer already exists
+        if 'id="contact"' in content and 'bg-gray-900' in content:
+            print(f"Footer already exists in {file_path}, skipping...")
+            return True
+            
+        # Replace </body></html> with footer + </body></html>
+        if '</body>' in content and '</html>' in content:
+            content = re.sub(r'</body>\s*</html>\s*$', footer_content, content, flags=re.DOTALL)
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Successfully added footer to {file_path}")
+            return True
+        else:
+            print(f"Could not find </body></html> in {file_path}")
+            return False
+            
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+        return False
+
+def main():
+    base_dir = "/Users/ubuntu/WebstormProjects/lionwindowsanddoors"
+    
+    # Service files that need the service footer
+    service_files = [
+        "services/exterior_doors.html",
+        "services/glass_replacement.html", 
+        "services/patio_doors.html",
+        "services/weatherstripping_sealing.html"
+    ]
+    
+    # Process service files
+    for file_path in service_files:
+        full_path = os.path.join(base_dir, file_path)
+        if os.path.exists(full_path):
+            add_footer_to_file(full_path, SERVICE_FOOTER)
+        else:
+            print(f"File not found: {full_path}")
+
+if __name__ == "__main__":
+    main()
