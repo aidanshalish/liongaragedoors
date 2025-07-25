@@ -1,80 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casement Window Services | Lion Windows and Doors</title>
-    <meta name="description" content="Reliable casement window installation and repair services in the GTA">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body class="bg-gray-50">
-<header class="navbar shadow-sm">
-    <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-            <div class="text-2xl font-bold text-primary">
-                <span class="text-yellow-500"><i class="fas fa-lion mr-1"></i>Lion</span>WindowsAndDoors
-            </div>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="../index.html#home" class="font-medium hover:text-yellow-500 transition">Home</a>
+#!/usr/bin/env python3
+"""
+Script to add the consistent footer and JavaScript from index.html 
+to all other HTML files in the Lion Windows and Doors project.
+"""
 
-                <div class="dropdown">
-                    <a href="../index.html#services" class="font-medium hover:text-yellow-500 transition inline-flex items-center">Services <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="weatherstripping_sealing.html">Weatherstripping &amp; Sealing</a>
-                        <a href="patio_doors.html">Patio Doors</a>
-                        <a href="exterior_doors.html">Exterior Doors</a>
-                        <a href="glass_replacement.html">Glass Replacement</a>
-                        <a href="closet_doors.html">Closet Doors</a>
-                        <a href="casement_window.html">Casement Window</a>
-                    </div>
-                </div>
+import os
+import re
+from pathlib import Path
 
-
-                <a href="../index.html#about" class="font-medium hover:text-yellow-500 transition">About</a>
-                <a href="../index.html#areas" class="font-medium hover:text-yellow-500 transition">Service Areas</a>
-                <a href="../index.html#gallery" class="font-medium hover:text-yellow-500 transition">Gallery</a>
-                <a href="../index.html#testimonials" class="font-medium hover:text-yellow-500 transition">Reviews</a>
-                <a href="../index.html#contact" class="btn-primary px-6 py-2">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="mobile-menu md:hidden">
-            <div class="flex flex-col space-y-3 py-4">
-                <a href="../index.html#home" class="block py-2 font-medium hover:text-yellow-500 transition">Home</a>
-
-                <div>
-                    <p class="font-medium">Services</p>
-                    <div class="pl-4 flex flex-col space-y-2 mt-2">
-                        <a href="weatherstripping_sealing.html" class="block py-1 text-sm hover:text-yellow-500">Weatherstripping &amp; Sealing</a>
-                        <a href="patio_doors.html" class="block py-1 text-sm hover:text-yellow-500">Patio Doors</a>
-                        <a href="exterior_doors.html" class="block py-1 text-sm hover:text-yellow-500">Exterior Doors</a>
-                        <a href="glass_replacement.html" class="block py-1 text-sm hover:text-yellow-500">Glass Replacement</a>
-                        <a href="closet_doors.html" class="block py-1 text-sm hover:text-yellow-500">Closet Doors</a>
-                        <a href="casement_window.html" class="block py-1 text-sm hover:text-yellow-500">Casement Window</a>
-                    </div>
-                </div>
-
-                <a href="../index.html#about" class="block py-2 font-medium hover:text-yellow-500 transition">About</a>
-                <a href="../index.html#areas" class="block py-2 font-medium hover:text-yellow-500 transition">Service Areas</a>
-                <a href="../index.html#gallery" class="block py-2 font-medium hover:text-yellow-500 transition">Gallery</a>
-                <a href="../index.html#testimonials" class="block py-2 font-medium hover:text-yellow-500 transition">Reviews</a>
-                <a href="../index.html#contact" class="btn-primary w-full text-center py-2 mt-2">Contact</a>
-            </div>
-        </div>
-    </div>
-    
-
+# Define the footer HTML and JavaScript content
+FOOTER_HTML = '''
 <!-- Footer -->
 <footer id="contact" class="relative bg-gray-900 text-white overflow-hidden">
     <!-- Background Pattern -->
@@ -113,7 +48,7 @@
                                     <span class="font-semibold">Call Us</span>
                                 </div>
                                 <a href="tel:2897636626" class="text-gray-300 hover:text-yellow-500 transition-colors">
-                                    (437) 970-4831
+                                    (289) 763-6626
                                 </a>
                             </div>
                             <div class="bg-gray-800 rounded-lg p-4 border border-gray-700 hover:border-yellow-500 transition-colors duration-300">
@@ -149,12 +84,12 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6 text-yellow-500">Quick Links</h3>
                     <ul class="space-y-3">
-                        <li><a href="../../../../../index.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Home</a></li>
-                        <li><a href="../../../../../index.html#about" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>About Us</a></li>
-                        <li><a href="../../../../../index.html#services" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Our Services</a></li>
-                        <li><a href="../../../../../index.html#gallery" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Gallery</a></li>
-                        <li><a href="../../../../../index.html#testimonials" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Testimonials</a></li>
-                        <li><a href="../../../../../index.html#areas" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Service Areas</a></li>
+                        <li><a href="index.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Our Services</a></li>
+                        <li><a href="index.html#gallery" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Gallery</a></li>
+                        <li><a href="index.html#testimonials" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Testimonials</a></li>
+                        <li><a href="index.html#areas" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Service Areas</a></li>
                     </ul>
                 </div>
                 
@@ -162,12 +97,12 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6 text-yellow-500">Our Services</h3>
                     <ul class="space-y-3">
-                        <li><a href="../../../../../services/casement_window.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-window-restore mr-2 text-sm"></i>Casement Windows</a></li>
-                        <li><a href="../../../../../services/exterior_doors.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-door-open mr-2 text-sm"></i>Exterior Doors</a></li>
-                        <li><a href="../../../../../services/patio_doors.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-door-open mr-2 text-sm"></i>Patio Doors</a></li>
-                        <li><a href="../../../../../services/glass_replacement.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-glass-whiskey mr-2 text-sm"></i>Glass Replacement</a></li>
-                        <li><a href="../../../../../services/closet_doors.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-door-closed mr-2 text-sm"></i>Closet Doors</a></li>
-                        <li><a href="../../../../../services/weatherstripping_sealing.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-wind mr-2 text-sm"></i>Weatherstripping</a></li>
+                        <li><a href="services/casement_window.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-window-restore mr-2 text-sm"></i>Casement Windows</a></li>
+                        <li><a href="services/exterior_doors.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-door-open mr-2 text-sm"></i>Exterior Doors</a></li>
+                        <li><a href="services/patio_doors.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-door-open mr-2 text-sm"></i>Patio Doors</a></li>
+                        <li><a href="services/glass_replacement.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-glass-whiskey mr-2 text-sm"></i>Glass Replacement</a></li>
+                        <li><a href="services/closet_doors.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-door-closed mr-2 text-sm"></i>Closet Doors</a></li>
+                        <li><a href="services/weatherstripping_sealing.html" class="text-gray-300 hover:text-yellow-500 transition-colors duration-300 flex items-center"><i class="fas fa-wind mr-2 text-sm"></i>Weatherstripping</a></li>
                     </ul>
                 </div>
             </div>
@@ -223,7 +158,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="tel:2897636626" class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 flex items-center">
-                        <i class="fas fa-phone mr-2"></i>Call Now: (437) 970-4831
+                        <i class="fas fa-phone mr-2"></i>Call Now: (289) 763-6626
                     </a>
                     <div class="text-gray-800 font-semibold">
                         <i class="fas fa-clock mr-2"></i>Free Estimates • Licensed & Insured
@@ -255,8 +190,9 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 </footer>
+'''
 
-
+FOOTER_JAVASCRIPT = '''
 <script>
     // Back to top functionality
     const backToTopBtn = document.getElementById('backToTop');
@@ -324,6 +260,101 @@
             }
         });
     }
-</script>
-</body>
-</html>
+</script>'''
+
+def fix_relative_paths(content, file_path):
+    """Fix relative paths in the footer based on the file's location."""
+    # Count directory depth
+    path_parts = Path(file_path).parts
+    depth = len(path_parts) - 2  # Subtract for project root and filename
+    
+    if depth > 0:
+        # Add "../" prefix for each directory level
+        prefix = "../" * depth
+        
+        # Fix service links
+        content = re.sub(r'href="services/', f'href="{prefix}services/', content)
+        
+        # Fix index.html links
+        content = re.sub(r'href="index\.html', f'href="{prefix}index.html', content)
+    
+    return content
+
+def add_footer_to_file(file_path):
+    """Add footer and JavaScript to a single HTML file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Skip if this is index.html (already has the footer)
+        if file_path.endswith('index.html') and 'lionpro' not in file_path:
+            print(f"Skipping {file_path} (main index.html already has footer)")
+            return
+        
+        # Remove existing footer if present
+        content = re.sub(r'<!--\s*Footer\s*-->.*?</footer>', '', content, flags=re.DOTALL | re.IGNORECASE)
+        
+        # Remove existing back to top button if present
+        content = re.sub(r'<button[^>]*id="backToTop"[^>]*>.*?</button>', '', content, flags=re.DOTALL)
+        
+        # Remove existing footer scripts
+        content = re.sub(r'<script>.*?(backToTop|toggleBackToTop|scrollToTop|smsForm).*?</script>', '', content, flags=re.DOTALL)
+        
+        # Find the position to insert footer (before </body>)
+        body_end_match = re.search(r'</body>', content, re.IGNORECASE)
+        if not body_end_match:
+            print(f"Warning: No </body> tag found in {file_path}")
+            return
+        
+        # Fix relative paths in footer content
+        footer_content = fix_relative_paths(FOOTER_HTML, file_path)
+        
+        # Insert footer and JavaScript before </body>
+        insert_pos = body_end_match.start()
+        new_content = (
+            content[:insert_pos] + 
+            footer_content + 
+            "\n" + 
+            FOOTER_JAVASCRIPT + 
+            "\n" + 
+            content[insert_pos:]
+        )
+        
+        # Write the updated content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        
+        print(f"✓ Updated footer in {file_path}")
+        
+    except Exception as e:
+        print(f"✗ Error processing {file_path}: {str(e)}")
+
+def main():
+    """Main function to process all HTML files."""
+    project_root = Path('/Users/ubuntu/WebstormProjects/lionwindowsanddoors')
+    
+    # Find all HTML files
+    html_files = list(project_root.rglob('*.html'))
+    
+    print(f"Found {len(html_files)} HTML files to process:")
+    for file_path in html_files:
+        print(f"  - {file_path}")
+    
+    print("\nProcessing files...")
+    
+    # Process each file
+    for file_path in html_files:
+        add_footer_to_file(str(file_path))
+    
+    print(f"\n✓ Completed processing {len(html_files)} HTML files!")
+    print("\nAll HTML files now have the consistent footer with:")
+    print("- Company information and contact details")
+    print("- Quick links and service links")
+    print("- Service areas")
+    print("- Call-to-action section")
+    print("- Social media links")
+    print("- Back-to-top button with smooth scroll")
+    print("- SMS form handling (where applicable)")
+
+if __name__ == "__main__":
+    main()
