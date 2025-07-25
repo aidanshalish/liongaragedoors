@@ -94,7 +94,7 @@
 <!-- Hero Section -->
 <section id="home" class="relative bg-gray-900">
     <div class="absolute inset-0 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/b4495d7e-2a46-43d4-849f-51a474b6ef00/public"
              alt="Beautiful home with windows and doors"
              class="w-full h-full object-cover opacity-30">
     </div>
@@ -117,41 +117,6 @@
                     <div class="flex items-center">
                         <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
                         <span>Free Estimates</span>
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-1/2">
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
-                    <div class="bg-primary text-white py-3 px-6">
-                        <h3 class="font-bold text-lg">Request a Free Consultation</h3>
-                    </div>
-                    <div class="p-6">
-                        <form id="smsForm">
-                            <div class="mb-4">
-                                <input type="text" name="name" placeholder="Your Name" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                            </div>
-                            <div class="mb-4">
-                                <input type="email" name="email" placeholder="Email Address" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                            </div>
-                            <div class="mb-4">
-                                <input type="tel" name="phone" placeholder="Phone Number" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                            </div>
-                            <div class="mb-4">
-                                <select name="service" required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                                    <option value="">Select Service</option>
-                                    <option value="windows">Window Installation</option>
-                                    <option value="doors">Door Installation</option>
-                                    <option value="repair">Repair Services</option>
-                                    <option value="consultation">Consultation</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn-primary w-full py-3">Submit Request</button>
-                        </form>
-
                     </div>
                 </div>
             </div>
@@ -292,7 +257,7 @@
 
             <!-- Weatherstripping & Sealing Service Card -->
             <div class="card bg-white">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" class="w-full h-48 object-cover" alt="Weatherstripping & Sealing">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/b4495d7e-2a46-43d4-849f-51a474b6ef00/public" class="w-full h-48 object-cover" alt="Weatherstripping & Sealing">
                 <div class="p-6">
                     <div class="service-icon mx-auto">
                         <i class="fas fa-wind"></i>
@@ -967,30 +932,6 @@
         });
     });
 
-        document.getElementById("smsForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const data = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        service: form.service.value
-        };
-
-        try {
-        const res = await fetch("https://clicksend-worker.aidan-shalish.workers.dev", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data)
-        });
-
-        const message = await res.text();
-        alert(message);
-        form.reset();
-    } catch (err) {
-        alert("Something went wrong. Please try again later.");
-    }
-    });
 
 </script>
 </body>
