@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17392695485"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17392695485');
-    </script>
+    <!-- Google tag (gtag.js) deferred to improve TTI; loaded after window load -->
     <meta name="google-site-verification" content="edGeTLQEd5xgv6HAPGDuHklhzHXlAEyj6BCGaI2qDyc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,9 +33,7 @@
             }
         };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"></noscript>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
@@ -51,6 +41,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="site-nav.js" defer></script>
+    <script>
+        // Load Font Awesome on idle/first interaction to reduce render-blocking CSS
+        (function() {
+            var href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css';
+            function loadFA() {
+                if (document.getElementById('fa-css')) return;
+                var l = document.createElement('link');
+                l.id = 'fa-css';
+                l.rel = 'stylesheet';
+                l.href = href;
+                document.head.appendChild(l);
+                window.removeEventListener('scroll', loadFA);
+                window.removeEventListener('mousemove', loadFA);
+                window.removeEventListener('touchstart', loadFA);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadFA);
+            } else {
+                window.addEventListener('scroll', loadFA, { once: true, passive: true });
+                window.addEventListener('mousemove', loadFA, { once: true, passive: true });
+                window.addEventListener('touchstart', loadFA, { once: true, passive: true });
+            }
+            // Defer gtag until after load to reduce JS on critical path
+            window.addEventListener('load', function() {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17392695485';
+                document.head.appendChild(s);
+                s.onload = function() {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);} // eslint-disable-line no-inner-declarations
+                    gtag('js', new Date());
+                    gtag('config', 'AW-17392695485');
+                };
+            });
+        })();
+    </script>
 </head>
 <body class="bg-gray-50">
 <!-- Header -->
@@ -140,7 +167,8 @@
     <div class="absolute inset-0 overflow-hidden">
         <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/b4495d7e-2a46-43d4-849f-51a474b6ef00/public"
              alt="Beautiful home with windows and doors"
-             class="w-full h-full object-cover opacity-30">
+             class="w-full h-full object-cover opacity-30"
+             loading="eager" decoding="async" fetchpriority="high">
     </div>
     <div class="relative hero-overlay">
         <div class="container mx-auto px-4 hero-min flex items-center py-20">
@@ -228,7 +256,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Casement Windows Service Card -->
             <div class="card bg-white">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/5327d12f-5d5f-401b-1658-1f7e4fbafd00/public" class="w-full h-48 object-cover" alt="Casement Windows">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/5327d12f-5d5f-401b-1658-1f7e4fbafd00/public" class="w-full h-48 object-cover" alt="Casement Windows" loading="lazy" decoding="async">
                 <div class="p-6">
                     <div class="service-icon mx-auto">
                         <i class="fas fa-window-restore"></i>
@@ -246,7 +274,7 @@
 
             <!-- Closet Doors Service Card -->
             <div class="card bg-white">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/9e31d834-83b7-4dd4-e0e1-455db7117800/public" class="w-full h-48 object-cover" alt="Closet Doors">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/9e31d834-83b7-4dd4-e0e1-455db7117800/public" class="w-full h-48 object-cover" alt="Closet Doors" loading="lazy" decoding="async">
                 <div class="p-6">
                     <div class="service-icon mx-auto">
                         <i class="fas fa-door-closed"></i>
@@ -264,7 +292,7 @@
 
             <!-- Exterior Doors Service Card -->
             <div class="card bg-white">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/65e42e57-dabd-4b01-4a59-78e144d0fb00/public" class="w-full h-48 object-cover" alt="Exterior Doors">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/65e42e57-dabd-4b01-4a59-78e144d0fb00/public" class="w-full h-48 object-cover" alt="Exterior Doors" loading="lazy" decoding="async">
                 <div class="p-6">
                     <div class="service-icon mx-auto">
                         <i class="fas fa-door-open"></i>
@@ -282,7 +310,7 @@
 
             <!-- Glass Replacement Service Card -->
             <div class="card bg-white">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/cb3eff16-7231-4d6c-df3e-acaaf50b0e00/public" class="w-full h-48 object-cover" alt="Glass Replacement">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/cb3eff16-7231-4d6c-df3e-acaaf50b0e00/public" class="w-full h-48 object-cover" alt="Glass Replacement" loading="lazy" decoding="async">
                 <div class="p-6">
                     <div class="service-icon mx-auto">
                         <i class="fas fa-glass-whiskey"></i>
@@ -300,7 +328,7 @@
 
             <!-- Patio Doors Service Card -->
             <div class="card bg-white">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/d73f9a6b-05c6-4b18-6eb3-f3c60119c000/public" class="w-full h-48 object-cover" alt="Patio Doors">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/d73f9a6b-05c6-4b18-6eb3-f3c60119c000/public" class="w-full h-48 object-cover" alt="Patio Doors" loading="lazy" decoding="async">
                 <div class="p-6">
                     <div class="service-icon mx-auto">
                         <i class="fas fa-door-open"></i>
@@ -318,7 +346,7 @@
 
             <!-- Weatherstripping & Sealing Service Card -->
             <div class="card bg-white">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/b4495d7e-2a46-43d4-849f-51a474b6ef00/public" class="w-full h-48 object-cover" alt="Weatherstripping & Sealing">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/b4495d7e-2a46-43d4-849f-51a474b6ef00/public" class="w-full h-48 object-cover" alt="Weatherstripping & Sealing" loading="lazy" decoding="async">
                 <div class="p-6">
                     <div class="service-icon mx-auto">
                         <i class="fas fa-wind"></i>
@@ -519,7 +547,7 @@
             <div class="gallery-item">
                 <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/7c0a31e5-df41-4b03-01f5-90e1981cd600/public"
                      alt="Modern black windows and doors"
-                     class="w-full">
+                     class="w-full" loading="lazy" decoding="async">
                 <div class="gallery-overlay">
                     <h4 class="font-bold text-lg">Modern Black Windows</h4>
                     <p class="text-sm">Richmond Hill, ON</p>
@@ -530,7 +558,7 @@
             <div class="gallery-item">
                 <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/b220d5eb-1953-4cae-6e4f-a7341e583900/public"
                      alt="Classic white windows"
-                     class="w-full">
+                     class="w-full" loading="lazy" decoding="async">
                 <div class="gallery-overlay">
                     <h4 class="font-bold text-lg">Classic White Windows</h4>
                     <p class="text-sm">Markham, ON</p>
@@ -541,7 +569,7 @@
             <div class="gallery-item">
                 <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/fd131d71-66f8-43e3-020b-a4c79cc4fb00/public"
                      alt="Contemporary door installation"
-                     class="w-full">
+                     class="w-full" loading="lazy" decoding="async">
                 <div class="gallery-overlay">
                     <h4 class="font-bold text-lg">Contemporary Entry Door</h4>
                     <p class="text-sm">Vaughan, ON</p>
@@ -552,7 +580,7 @@
             <div class="gallery-item">
                 <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/ab83ac6b-eee4-4427-2fef-74a42f273b00/public"
                      alt="Energy efficient windows"
-                     class="w-full">
+                     class="w-full" loading="lazy" decoding="async">
                 <div class="gallery-overlay">
                     <h4 class="font-bold text-lg">Energy Efficient Windows</h4>
                     <p class="text-sm">Toronto, ON</p>
@@ -563,7 +591,7 @@
             <div class="gallery-item">
                 <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/6f85ee5d-9cae-43a2-34c3-04bfd236d900/public"
                      alt="Dark finish windows"
-                     class="w-full">
+                     class="w-full" loading="lazy" decoding="async">
                 <div class="gallery-overlay">
                     <h4 class="font-bold text-lg">Dark Finish Windows</h4>
                     <p class="text-sm">Newmarket, ON</p>
@@ -574,7 +602,7 @@
             <div class="gallery-item">
                 <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/3e01f954-b9f6-4703-ac81-7c0dfe728200/public"
                      alt="Modern window installation"
-                     class="w-full">
+                     class="w-full" loading="lazy" decoding="async">
                 <div class="gallery-overlay">
                     <h4 class="font-bold text-lg">Modern Window Installation</h4>
                 </div>
@@ -591,9 +619,9 @@
         </div>
         <div class="max-w-3xl mx-auto">
             <div class="before-after-container">
-                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/a1bc87e4-57fd-4f43-99a5-23665c346e00/public" alt="Before" class="w-full h-auto">
+                <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/a1bc87e4-57fd-4f43-99a5-23665c346e00/public" alt="Before" class="w-full h-auto" loading="lazy" decoding="async">
                 <div id="afterImage" class="after-image">
-                    <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/1ab27e44-45fc-4a8b-0e42-544f26a7f400/public" alt="After" class="w-full h-full object-cover">
+                    <img src="https://imagedelivery.net/hv2kQxKO6R7tu-YqpzDNMw/1ab27e44-45fc-4a8b-0e42-544f26a7f400/public" alt="After" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </div>
                 <div id="sliderLine" class="before-after-line"></div>
                 <label for="beforeAfterRange" class="sr-only">Before and after comparison slider</label>
