@@ -10,6 +10,7 @@
 
         gtag('config', 'AW-17392695485');
     </script>
+    <meta name="google-site-verification" content="edGeTLQEd5xgv6HAPGDuHklhzHXlAEyj6BCGaI2qDyc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Open Graph / Facebook / WhatsApp / Instagram -->
@@ -27,18 +28,58 @@
     <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/thumbnail_logo.jpeg" />
 
     <title>Lion Windows and Doors | Premium Installation & Repair | York Region & GTA</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <script>
+        tailwind = window.tailwind || {};
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2c5282'
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="site-nav.js" defer></script>
 </head>
 <body class="bg-gray-50">
 <!-- Header -->
-<header class="navbar shadow-sm">
-    <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
+<header id="site-header" class="navbar shadow-sm">
+    <div class="container mx-auto px-4">
+        <!-- Topbar -->
+        <div class="hidden md:flex items-center justify-between text-xs text-gray-600 py-2">
+            <div class="flex items-center gap-4">
+                <a href="tel:2897636626" class="flex items-center gap-2 hover:text-yellow-600 transition">
+                    <i class="fas fa-phone text-yellow-500"></i>
+                    <span>(437) 970-4831</span>
+                </a>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-yellow-500"></i>
+                    <span>Licensed & Insured</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-award text-yellow-500"></i>
+                    <span>15+ Years Experience</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-clock text-yellow-500"></i>
+                    <span>Free Estimates</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center py-4">
             <div class="text-2xl font-bold text-primary">
                 <span class="text-yellow-500"><i class="fas fa-lion mr-1"></i>Lion</span>WindowsAndDoors
             </div>
@@ -59,7 +100,8 @@
                 <a href="#areas" class="font-medium hover:text-yellow-500 transition">Service Areas</a>
                 <a href="#gallery" class="font-medium hover:text-yellow-500 transition">Gallery</a>
                 <a href="#testimonials" class="font-medium hover:text-yellow-500 transition">Reviews</a>
-                <a href="#contact" class="btn-primary px-6 py-2">Contact</a>
+                <a href="tel:2897636626" class="btn-secondary px-5 py-2 inline-flex items-center gap-2"><i class="fas fa-phone"></i> Call</a>
+                <a href="#contact" class="btn-primary px-6 py-2">Get Free Estimate</a>
             </div>
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
@@ -91,13 +133,6 @@
             </div>
         </div>
     </div>
-    <script>
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-    </script>
 </header>
 
 <!-- Hero Section -->
@@ -107,31 +142,48 @@
              alt="Beautiful home with windows and doors"
              class="w-full h-full object-cover opacity-30">
     </div>
-    <div class="relative hero-overlay py-28">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 text-white mb-10 md:mb-0">
+    <div class="relative hero-overlay">
+        <div class="container mx-auto px-4 hero-min flex items-center py-20">
+            <div class="max-w-2xl text-white">
                 <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Premium Window & Door Solutions in the GTA</h1>
-                <p class="text-xl mb-8">Enhance your home's beauty, security, and energy efficiency with expert installations from our certified professionals.</p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="btn-primary text-center">Get Free Estimate</a>
-                    <a href="tel:2897636626" class="btn-secondary text-center">
-                        <i class="fas fa-phone mr-2"></i> (437) 970-4831
+                <p class="text-lg md:text-xl mb-8 opacity-95">Enhance your home's beauty, security, and energy efficiency with expert installations from our certified professionals.</p>
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <a href="#contact" class="btn-primary text-center inline-flex items-center justify-center gap-2"><i class="fas fa-clipboard-check"></i> Get Free Estimate</a>
+                    <a href="tel:2897636626" class="btn-secondary text-center inline-flex items-center justify-center gap-2">
+                        <i class="fas fa-phone"></i> (437) 970-4831
                     </a>
                 </div>
-                <div class="mt-8 flex items-center space-x-4">
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div class="stat-badge">
+                        <i class="fas fa-check-circle"></i>
                         <span>Licensed & Insured</span>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
-                        <span>Free Estimates</span>
+                    <div class="stat-badge">
+                        <i class="fas fa-award"></i>
+                        <span>15+ Years Experience</span>
+                    </div>
+                    <div class="stat-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>10-Year Warranty</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Decorative divider -->
+<div class="shape-divider">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,64L60,53.3C120,43,240,21,360,26.7C480,32,600,64,720,74.7C840,85,960,75,1080,58.7C1200,43,1320,21,1380,10.7L1440,0L1440,90L1380,90C1320,90,1200,90,1080,90C960,90,840,90,720,90C600,90,480,90,360,90C240,90,120,90,60,90L0,90Z" fill="#ffffff"></path>
+    </svg>
+    <div class="shape-divider-shadow"></div>
+    </div>
+
+<!-- Floating Call Button -->
+<a id="callUsButton" href="tel:2897636626" aria-label="Call Lion Windows and Doors">
+    <i class="fas fa-phone"></i>
+</a>
 
 <!-- Features -->
 <section class="py-16 bg-white">

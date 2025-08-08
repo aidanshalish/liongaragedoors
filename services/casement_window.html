@@ -14,17 +14,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casement Window Services | Lion Windows and Doors</title>
     <meta name="description" content="Reliable casement window installation and repair services in the GTA">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <script>
+        tailwind = window.tailwind || {};
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#1a365d', secondary: '#2c5282' } } }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <script src="../site-nav.js" defer></script>
 </head>
 <body class="bg-gray-50">
-<header class="navbar shadow-sm">
-    <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
+<header id="site-header" class="navbar shadow-sm">
+    <div class="container mx-auto px-4">
+        <!-- Topbar -->
+        <div class="hidden md:flex items-center justify-between text-xs text-gray-600 py-2">
+            <div class="flex items-center gap-4">
+                <a href="tel:2897636626" class="flex items-center gap-2 hover:text-yellow-600 transition">
+                    <i class="fas fa-phone text-yellow-500"></i>
+                    <span>(437) 970-4831</span>
+                </a>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-yellow-500"></i>
+                    <span>Licensed & Insured</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-award text-yellow-500"></i>
+                    <span>15+ Years Experience</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-clock text-yellow-500"></i>
+                    <span>Free Estimates</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center py-4">
             <div class="text-2xl font-bold text-primary">
                 <span class="text-yellow-500"><i class="fas fa-lion mr-1"></i>Lion</span>WindowsAndDoors
             </div>
@@ -48,10 +81,11 @@
                 <a href="../index.html#areas" class="font-medium hover:text-yellow-500 transition">Service Areas</a>
                 <a href="../index.html#gallery" class="font-medium hover:text-yellow-500 transition">Gallery</a>
                 <a href="../index.html#testimonials" class="font-medium hover:text-yellow-500 transition">Reviews</a>
-                <a href="../index.html#contact" class="btn-primary px-6 py-2">Contact</a>
+                <a href="tel:2897636626" class="btn-secondary px-5 py-2 inline-flex items-center gap-2"><i class="fas fa-phone"></i> Call</a>
+                <a href="../index.html#contact" class="btn-primary px-6 py-2">Get Free Estimate</a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -82,7 +116,7 @@
             </div>
         </div>
     </div>
-    
+    </header>
 
 <!-- Footer -->
 <footer id="contact" class="relative bg-gray-900 text-white overflow-hidden">
