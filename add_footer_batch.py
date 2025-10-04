@@ -45,8 +45,8 @@ SERVICE_FOOTER = '''
                                     <i class="fas fa-phone text-yellow-500 mr-3"></i>
                                     <span class="font-semibold">Call Us</span>
                                 </div>
-                                <a href="tel:+12898036671" class="text-gray-300 hover:text-yellow-500 transition-colors">
-                                    (289) 803-6671
+                                <a href="tel:+12893797726" class="text-gray-300 hover:text-yellow-500 transition-colors">
+                                    +1 289-379-7726
                                 </a>
                             </div>
                             <div class="bg-gray-800 rounded-lg p-4 border border-gray-700 hover:border-yellow-500 transition-colors duration-300">
@@ -155,8 +155,8 @@ SERVICE_FOOTER = '''
                     Get your free consultation today and discover how Lion Windows and Doors can enhance your home's beauty, security, and energy efficiency.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="tel:+12898036671" class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 flex items-center">
-                        <i class="fas fa-phone mr-2"></i>Call Now: (289) 803-6671
+                    <a href="tel:+12893797726" class="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 flex items-center">
+                        <i class="fas fa-phone mr-2"></i>Call Now: +1 289-379-7726
                     </a>
                     <div class="text-gray-800 font-semibold">
                         <i class="fas fa-clock mr-2"></i>Free Estimates • Licensed & Insured
