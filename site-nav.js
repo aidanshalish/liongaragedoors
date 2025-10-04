@@ -7,6 +7,12 @@
 
     var btn = document.getElementById('mobile-menu-button');
     var menu = document.getElementById('mobile-menu');
+    var bottomBanner = document.getElementById('global-top-banner');
+
+    function updateBottomBannerOffset() {
+      var height = bottomBanner ? bottomBanner.offsetHeight : 0;
+      document.documentElement.style.setProperty('--bottom-banner-height', height + 'px');
+    }
 
     if (btn && menu) {
       btn.addEventListener('click', function () {
@@ -52,15 +58,20 @@
 
     // Use passive scroll listener for better performance
     window.addEventListener('scroll', requestTick, { passive: true });
-    
+    window.addEventListener('resize', function () {
+      updateBottomBannerOffset();
+    });
+
     // Initial check on load
     window.addEventListener('load', function() {
+      updateBottomBannerOffset();
       requestAnimationFrame(updateStickyHeader);
     });
+
+    updateBottomBannerOffset();
+    requestAnimationFrame(updateStickyHeader);
     
   } catch (e) {
     // no-op: avoid breaking page if something unexpected occurs
   }
 })();
-
-

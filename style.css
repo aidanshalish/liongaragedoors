@@ -1,5 +1,11 @@
 html { scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; color: #333; }
+:root { --bottom-banner-height: 0px; }
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding-bottom: var(--bottom-banner-height);
+    transition: padding-bottom 0.2s ease;
+}
 .bg-primary { background-color: #1a365d; }
 .bg-secondary { background-color: #2c5282; }
 .text-primary { color: #1a365d; }
@@ -60,6 +66,93 @@ body { font-family: 'Poppins', sans-serif; color: #333; }
     padding: 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border: 1px solid #e2e8f0;
+}
+.global-top-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1200;
+    display: flex;
+    justify-content: center;
+    padding: 0.85rem;
+    pointer-events: none;
+}
+
+.global-top-banner .banner-cta {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    background: linear-gradient(135deg, #ff7a18 0%, #ff4d00 100%);
+    color: #ffffff;
+    padding: 0.85rem 1.75rem;
+    border-radius: 9999px;
+    box-shadow: 0 16px 30px rgba(255, 102, 0, 0.35);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.global-top-banner .banner-cta:hover,
+.global-top-banner .banner-cta:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 34px rgba(255, 102, 0, 0.42);
+    background: linear-gradient(135deg, #ff8c2c 0%, #ff3404 100%);
+}
+
+.global-top-banner .banner-cta:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.65);
+    outline-offset: 4px;
+}
+
+.banner-cta__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.banner-cta__content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.banner-cta__headline {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.banner-cta__number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+    .global-top-banner {
+        padding: 0.75rem;
+    }
+
+    .global-top-banner .banner-cta {
+        width: calc(100% - 1.5rem);
+        justify-content: center;
+        text-align: center;
+        padding: 0.85rem 1.25rem;
+    }
+
+    .banner-cta__content {
+        align-items: center;
+    }
+
+    .banner-cta__headline {
+        font-size: 0.85rem;
+    }
+
+    .banner-cta__number {
+        font-size: 1.2rem;
+    }
 }
 .navbar {
     transition: all 0.3s;
