@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lionpro.ca/sitemap.xml
+Sitemap: https://liongaragedoors.ca/sitemap.xml
 
