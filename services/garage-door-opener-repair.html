@@ -266,7 +266,8 @@
         <div class="bg-gray-900 text-white rounded-2xl p-8 shadow-2xl">
           <h3 class="text-2xl font-semibold mb-4">Book an Opener Tune-Up</h3>
           <p class="text-blue-100 mb-6">Drop your details below and I’ll call you personally. Together we’ll decide whether to repair, recalibrate, or upgrade.</p>
-          <form class="space-y-4">
+          <form class="space-y-4" method="POST" action="/api/contact">
+            <input type="hidden" name="source" value="garage-door-opener-repair" />
             <input type="text" name="name" placeholder="Name" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-500" />
             <input type="tel" name="phone" placeholder="Phone" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-500" />
             <input type="email" name="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-red-500" />
