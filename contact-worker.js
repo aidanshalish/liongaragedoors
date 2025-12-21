@@ -5,7 +5,7 @@
 // - ALLOWED_ORIGINS (optional): comma-separated list of allowed origins for CORS. Defaults to liongaragedoors.ca + www.
 export default {
   async fetch(request, env) {
-    const allowedOrigins = getAllowedOrigins(env);
+    const allowedOrigins = getAllowedOrigins(env, request);
     const cors = buildCorsHeaders(request, allowedOrigins);
 
     if (request.method === 'OPTIONS') {
@@ -75,6 +75,7 @@ export default {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(mailPayload)
     });
+    console.log('mailchannels status', mailResp.status, await mailResp.text());
 
     if (!mailResp.ok) {
       const errText = await mailResp.text();
@@ -105,11 +106,18 @@ async function parseBody(request) {
   return null;
 }
 
-function getAllowedOrigins(env) {
-  if (env.ALLOWED_ORIGINS) {
-    return env.ALLOWED_ORIGINS.split(',').map((o) => o.trim()).filter(Boolean);
-  }
-  return ['https://liongaragedoors.ca', 'https://www.liongaragedoors.ca'];
+function getAllowedOrigins(env, request) {
+  const defaults = ['https://liongaragedoors.ca', 'https://www.liongaragedoors.ca'];
+  const fromEnv = env.ALLOWED_ORIGINS
+    ? env.ALLOWED_ORIGINS.split(',').map((o) => o.trim()).filter(Boolean)
+    : [];
+
+  // Always trust the current host as allowed (helps when routes or envs are misconfigured)
+  const host = request.headers.get('Host');
+  const proto = request.headers.get('X-Forwarded-Proto') || 'https';
+  const currentOrigin = host ? `${proto}://${host}` : null;
+
+  return Array.from(new Set([...defaults, ...fromEnv, ...(currentOrigin ? [currentOrigin] : [])]));
 }
 
 function buildCorsHeaders(request, allowedOrigins) {
