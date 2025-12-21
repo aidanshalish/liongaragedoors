@@ -5,7 +5,7 @@
 // - ALLOWED_ORIGINS (optional): comma-separated list of allowed origins for CORS. Defaults to liongaragedoors.ca + www.
 export default {
   async fetch(request, env) {
-    const allowedOrigins = getAllowedOrigins(env, request);
+    const { allowedOrigins, allowedHosts } = getAllowedOrigins(env, request);
     const cors = buildCorsHeaders(request, allowedOrigins);
 
     if (request.method === 'OPTIONS') {
@@ -17,7 +17,15 @@ export default {
     }
 
     const origin = request.headers.get('Origin');
-    if (origin && !allowedOrigins.includes(origin)) {
+    const originHost = origin ? safeHost(origin) : null;
+    const requestHost = request.headers.get('Host');
+    const originAllowed =
+      !origin ||
+      allowedOrigins.includes(origin) ||
+      (originHost && allowedHosts.has(originHost)) ||
+      (originHost && requestHost && originHost === requestHost);
+
+    if (!originAllowed) {
       return new Response(JSON.stringify({ error: 'Origin not allowed' }), { status: 403, headers: cors });
     }
 
@@ -117,7 +125,10 @@ function getAllowedOrigins(env, request) {
   const proto = request.headers.get('X-Forwarded-Proto') || 'https';
   const currentOrigin = host ? `${proto}://${host}` : null;
 
-  return Array.from(new Set([...defaults, ...fromEnv, ...(currentOrigin ? [currentOrigin] : [])]));
+  const origins = Array.from(new Set([...defaults, ...fromEnv, ...(currentOrigin ? [currentOrigin] : [])]));
+  const hosts = new Set(origins.map((o) => safeHost(o)).filter(Boolean));
+  if (host) hosts.add(host);
+  return { allowedOrigins: origins, allowedHosts: hosts };
 }
 
 function buildCorsHeaders(request, allowedOrigins) {
@@ -133,4 +144,12 @@ function buildCorsHeaders(request, allowedOrigins) {
     headers['Access-Control-Allow-Origin'] = allowedOrigins[0];
   }
   return headers;
+}
+
+function safeHost(origin) {
+  try {
+    return new URL(origin).host;
+  } catch {
+    return null;
+  }
 }
